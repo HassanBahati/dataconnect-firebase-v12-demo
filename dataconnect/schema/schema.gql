@@ -12,14 +12,14 @@
 # }
 
 # # Movie is keyed by a randomly generated UUID.
-# type Movie @table {
-#   # If you do not pass a 'key' to `@table`, Data Connect automatically adds the following 'id' column.
-#   # Feel free to uncomment and customize it.
-#   #  id: UUID! @default(expr: "uuidV4()")
-#   title: String!
-#   imageUrl: String!
-#   genre: String
-# }
+type Movie @table {
+  # If you do not pass a 'key' to `@table`, Data Connect automatically adds the following 'id' column.
+  # Feel free to uncomment and customize it.
+   id: UUID! @default(expr: "uuidV4()")
+  title: String!
+  imageUrl: String!
+  genre: String
+}
 
 # # MovieMetadata is a metadata attached to a Movie.
 # # Movie <-> MovieMetadata is a one-to-one relationship
